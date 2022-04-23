@@ -7,16 +7,19 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 
 
 class TaskFragment : Fragment() {
 
-    private val taskViewModel = TaskViewModel()
+    private lateinit var taskViewModel: TaskViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        taskViewModel = ViewModelProvider(requireActivity()).get(TaskViewModel::class.java)
+
         val rootView: View = inflater.inflate(R.layout.fragment_task, container, false)
 
         val bSaveTask = rootView.findViewById<TextView>(R.id.bSaveTask)
