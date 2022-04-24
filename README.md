@@ -8,5 +8,6 @@ Das TaskFragment ist momentan mit findViewById() implementiert. Ändere die Impl
 </br></br>
 
 ### 2.2
-Die Variable currentTask in der Klasse TaskViewModel soll nun ein LiveData-Objekt sein. Ändere die Implementierung in den Klassen TaskViewModel und TaskFragment dementsprechend. </br>
+Die Variable currentTask in der Klasse TaskViewModel soll nun ein LiveData-Objekt sein. Ändere die Implementierung in den Klassen TaskViewModel und TaskFragment dementsprechend.
+
 **Hinweis:** In dem TaskFragment muss ein Observer registriert werden.
